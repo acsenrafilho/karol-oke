@@ -4,9 +4,11 @@ import cv2
 import numpy as np
 
 from player import _frame_stream
-from tools import set_background
-
-MENU_BACKGROUND_DB = "./backgrounds"
+from tools import (
+    set_background,
+    set_number_position
+)
+from general_config import MENU_BACKGROUND_DB
 
 
 def music_selection(monitor):
@@ -40,20 +42,9 @@ def _update_music_code(code, digit):
     return ""
 
 
-def _adjust_music_code(code, image, clean_image):
-    if len(code) > 5:
-        return "", clean_image
-    return code, image
-
-
 def _add_digit_in_image(image, music_code, monitor):
     img_txt = np.copy(image)
-    position = _set_position(image, monitor)
+    position = set_number_position(monitor)
     font = cv2.FONT_HERSHEY_SIMPLEX
     cv2.putText(img_txt, music_code, position, font, 2, (255, 0, 0), 5)
     return img_txt
-
-
-def _set_position(image, monitor):
-    mw, mh = monitor.width, monitor.height
-    return int(0.5 * mh), int(0.425 * mw)

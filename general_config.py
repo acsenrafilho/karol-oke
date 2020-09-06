@@ -1,0 +1,5 @@
+MENU_BACKGROUND_DB = "./backgrounds"
+MUSIC_DB = "./music_list"
+WND_NAME = "Karol-Oke"
+MUSIC_BAR = "./overlay/player_bar.png"
+SCORE_BACKGROUND = "./score"

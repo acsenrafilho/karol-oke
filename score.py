@@ -2,8 +2,7 @@ import cv2
 import numpy as np
 from player import _frame_stream
 from tools import set_background
-
-SCORE_BACKGROUND = "./score"
+from general_config import SCORE_BACKGROUND
 
 
 def collect_score(monitor):
