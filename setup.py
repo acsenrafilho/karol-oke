@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='Karol-Oke',
-      version='0.0.0',
+      version='0.0.1',
       description='Simple framework for Karoke',
       author='Antonio Filho',
       author_email='acsenrafilho@gmail.com',
