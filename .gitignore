@@ -1,6 +1,9 @@
 #mp4 files
 music_list/*
 
+# VSCode
+.vscode
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
