@@ -9,7 +9,7 @@ import vlc
 
 
 def start_video(video_path, monitor):
-    start_player_with_controllers(vlc_media_player(video_path))
+    start_player_with_controllers(vlc_media_player(video_path), monitor)
 
 
 def vlc_media_player(video_path):
