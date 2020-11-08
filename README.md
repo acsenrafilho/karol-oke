@@ -10,6 +10,11 @@ Offer a simple way to use a video set and a simple user interface for Karoke par
 
 - [ ] Simple menu to add music code number
 
+## Installation
+
+### Linux (tested on Ubuntu)
+
+
 ## Documentation
 
 Getting started using the `docs` folder for additional documentation
