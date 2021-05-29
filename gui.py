@@ -1,12 +1,12 @@
 import player_controls as pc
-from general_config import ICONS_SET
 
 import PySimpleGUI as sg
 
 
 def start_player_with_controllers(player, monitor):
-    _init_player(player)
-    music_duration = player.get_media().get_duration()
+    end_status = 0
+    player.set_fullscreen(True)
+    player.play()
 
     sg.theme("LightBlue")
     layout = [
@@ -31,11 +31,9 @@ def start_player_with_controllers(player, monitor):
         # End program if user closes window or
         event_actions[event](player, sg)
         if event in (sg.WIN_CLOSED, "Fechar Música"):
+            end_status = 1
             break
 
     window.close()
 
-
-def _init_player(player):
-    player.set_fullscreen(True)
-    player.play()
+    return end_status

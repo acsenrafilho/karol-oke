@@ -1,4 +1,6 @@
 import os
+import glob
+import random
 
 import cv2
 from gui import start_player_with_controllers
@@ -8,8 +10,8 @@ from tools import fill_code_space
 import vlc
 
 
-def start_video(video_path, monitor):
-    start_player_with_controllers(vlc_media_player(video_path), monitor)
+def start_video(vlc_player, monitor):
+    return start_player_with_controllers(vlc_player, monitor)
 
 
 def vlc_media_player(video_path):
@@ -36,3 +38,8 @@ def _frame_stream(frame, monitor):
     cv2.setWindowProperty(WND_NAME, cv2.WND_PROP_FULLSCREEN,
                           cv2.WINDOW_FULLSCREEN)
     cv2.imshow(WND_NAME, frame)
+
+
+def random_score_video(score_database):
+    videos_list = glob.glob(score_database + "/*.mp4")
+    return random.choice(videos_list)
