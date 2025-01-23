@@ -22,5 +22,5 @@ def fill_code_space(code):
     final_code = code
     fill_length = 5 - len(code)
     if fill_length > 0:
-        final_code = "0"*fill_length + code
+        final_code = '0' * fill_length + code
     return final_code

@@ -3,18 +3,15 @@ import string
 import cv2
 import numpy as np
 
-from player import _frame_stream
-from tools import (
-    set_background,
-    set_number_position
-)
 from general_config import MENU_BACKGROUND_DB
+from player import _frame_stream
+from tools import set_background, set_number_position
 
 
 def music_selection(monitor):
     bg_img = set_background(MENU_BACKGROUND_DB)
     clean_bg = np.copy(bg_img)
-    music_code = ""
+    music_code = ''
 
     while True:
         print(music_code)
@@ -39,7 +36,7 @@ def _update_music_code(code, digit):
     if chr(digit) in string.digits and len(final_code) < 5:
         final_code = final_code + chr(digit)
         return final_code
-    return ""
+    return ''
 
 
 def _add_digit_in_image(image, music_code, monitor):

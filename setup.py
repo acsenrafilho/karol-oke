@@ -2,10 +2,11 @@
 
 from distutils.core import setup
 
-setup(name='Karol-Oke',
-      version='0.0.4',
-      description='Simple framework for Karoke',
-      author='Antonio Filho',
-      author_email='acsenrafilho@gmail.com',
-      url='https://www.python.org/'
-      )
+setup(
+    name='Karol-Oke',
+    version='0.0.4',
+    description='Simple framework for Karoke',
+    author='Antonio Filho',
+    author_email='acsenrafilho@gmail.com',
+    url='https://www.python.org/',
+)
