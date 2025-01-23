@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "karol-oke"
+version = "1.0.0"
+description = "Um simples tocador de músicas de karaokê para fazer a festa!"
+authors = ["Antonio Senra Filho <acsenrafilho@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Games/Entertainment",
+    "Topic :: Multimedia :: Video :: Display",
+    "Topic :: Multimedia :: Sound/Audio :: Players",
+    "License :: OSI Approved :: MIT License",    
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+blue = "^0.9.1"
+isort = "^5.13.2"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+taskipy = "^1.14.1"
+ignr = "^2.2"
+
+
+[tool.poetry.group.doc.dependencies]
+mkdocs-material = "^9.5.50"
+mkdocstrings = "^0.27.0"
+mkdocstrings-python = "^1.13.0"
+pymdown-extensions = "^10.14.1"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.taskipy.tasks]
+lint = "blue . && isort ."
+docs = "mkdocs serve"
+pre_test="task lint"
+test = "pytest --ignore-glob='./karol-oke/scripts/*.py' -s -x --cov=karol-oke -vv"
+post_test = "coverage html"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
