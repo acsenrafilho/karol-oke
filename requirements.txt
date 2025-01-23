@@ -1,5 +1,5 @@
 bumpversion==0.6.0
-opencv-python==4.4.0.42
-screeninfo==0.6.5
-python-vlc==3.0.11115
-pysimplegui==4.30.0
+opencv-python==4.11.0.86
+screeninfo==0.8.1
+python-vlc==3.0.21203
+pysimplegui==4.70.1
