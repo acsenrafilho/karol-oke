@@ -1,6 +1,6 @@
 import PySimpleGUI as sg
 
-import player_controls as pc
+import karoloke.player_controls as pc
 
 
 def start_player_with_controllers(player, monitor):

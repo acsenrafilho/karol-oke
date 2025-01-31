@@ -3,9 +3,9 @@ import string
 import cv2
 import numpy as np
 
-from general_config import MENU_BACKGROUND_DB
-from player import _frame_stream
-from tools import set_background, set_number_position
+from karoloke.general_config import MENU_BACKGROUND_DB
+from karoloke.player import _frame_stream
+from karoloke.tools import set_background, set_number_position
 
 
 def music_selection(monitor):

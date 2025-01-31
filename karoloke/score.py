@@ -1,9 +1,9 @@
 import cv2
 import numpy as np
 
-from general_config import SCORE_BACKGROUND
-from player import _frame_stream
-from tools import set_background
+from karoloke.general_config import SCORE_BACKGROUND
+from karoloke.player import _frame_stream
+from karoloke.tools import set_background
 
 
 def collect_score(monitor):

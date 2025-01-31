@@ -5,9 +5,9 @@ import random
 import cv2
 import vlc
 
-from general_config import WND_NAME
-from gui import start_player_with_controllers
-from tools import fill_code_space
+from karoloke.general_config import WND_NAME
+from karoloke.gui import start_player_with_controllers
+from karoloke.tools import fill_code_space
 
 
 def start_video(vlc_player, monitor):
