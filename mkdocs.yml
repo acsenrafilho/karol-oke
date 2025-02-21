@@ -1,6 +1,6 @@
-site_name: karol-oke
-repo_url: https://github.com/acsenrafilho/karol-oke
-repo_name: acsenrafilho/karol-oke
+site_name: karoloke
+repo_url: https://github.com/acsenrafilho/karoloke
+repo_name: acsenrafilho/karoloke
 edit_uri: tree/main/docs
 
 theme:
@@ -50,4 +50,4 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
-          paths: [karol-oke]
+          paths: [karoloke]
