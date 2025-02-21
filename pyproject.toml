@@ -1,6 +1,6 @@
 [tool.poetry]
-name = "karol-oke"
-version = "1.0.0"
+name = "karoloke"
+version = "0.0.4"
 description = "Um simples tocador de músicas de karaokê para fazer a festa!"
 authors = ["Antonio Senra Filho <acsenrafilho@gmail.com>"]
 license = "MIT"
@@ -46,7 +46,7 @@ line_length = 79
 lint = "blue . && isort ."
 docs = "mkdocs serve"
 pre_test="task lint"
-test = "pytest --ignore-glob='./karol-oke/scripts/*.py' -s -x --cov=karol-oke -vv"
+test = "pytest --ignore-glob='./karoloke/scripts/*.py' -s -x --cov=karoloke -vv"
 post_test = "coverage html"
 
 [build-system]
